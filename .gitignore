@@ -1,0 +1,5 @@
+*.qsb
+theme.conf.user
+__pycache__/
+*.pyc
+.DS_Store

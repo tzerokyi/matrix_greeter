@@ -1,0 +1,14 @@
+{
+  "KPackageStructure": "Plasma/Shell",
+  "KPlugin": {
+    "Id": "org.tzerokyi.matrix.lock",
+    "Name": "Matrix Greeter - Plasma Lock Screen",
+    "Description": "Matrix-style screen locker with KDE fallback",
+    "Version": "3.1.0",
+    "License": "MIT",
+    "Authors": [{"Name": "tzerokyi"}],
+    "EnabledByDefault": false
+  },
+  "X-Plasma-APIVersion": "2",
+  "X-Plasma-FallbackPackage": "org.kde.plasma.desktop"
+}
