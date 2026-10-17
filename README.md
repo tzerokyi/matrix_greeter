@@ -1,8 +1,8 @@
 # Matrix Greeter
 
-[Watch the 10-second SDDM demo (MP4)](media/matrix-greeter-demo-10s.mp4?raw=1)
+![Animated preview of the Matrix Greeter SDDM theme](media/matrix-greeter-preview.gif)
 
-[![Matrix Greeter SDDM login screenshot](sddm/login-preview.png)](media/matrix-greeter-demo-10s.mp4?raw=1)
+[Watch the 10-second SDDM demo in full resolution (MP4)](media/matrix-greeter-demo-10s.mp4?raw=1)
 
 The video shows the SDDM theme in test mode with a moving pointer. It does not show a real login.
 
