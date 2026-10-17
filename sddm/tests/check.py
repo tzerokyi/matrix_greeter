@@ -5,7 +5,7 @@ import struct
 
 root = Path(__file__).resolve().parents[1]
 for name in ('Main.qml','RainEngine.qml','FlatAction.qml','theme.conf','metadata.desktop',
-             'shaders/rain.frag','assets/glyph-atlas.png','assets/fallback.png','preview.png'):
+             'shaders/rain.frag','assets/glyph-atlas.png','assets/fallback.png','login-preview.png'):
     path=root/name
     assert path.is_file() and path.stat().st_size>0, f'Missing or empty: {name}'
 for file in ('Main.qml','RainEngine.qml','FlatAction.qml'):
@@ -28,7 +28,7 @@ assert 'layout(binding = 1) uniform sampler2D glyphAtlas;' in frag
 assert 'qt_TexCoord0' in frag
 assert 'qt_Matrix' in frag and 'qt_Opacity' in frag
 assert 'fragColor = ' in frag
-for img in ('assets/glyph-atlas.png','assets/fallback.png','preview.png'):
+for img in ('assets/glyph-atlas.png','assets/fallback.png','login-preview.png'):
     data=(root/img).read_bytes()
     assert data[:8]==b'\x89PNG\r\n\x1a\n', f'Invalid PNG signature: {img}'
     assert data[12:16]==b'IHDR', f'Missing PNG header: {img}'

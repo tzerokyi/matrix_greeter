@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 from pathlib import Path
-from PIL import Image, ImageFont, ImageDraw, ImageFilter
+from PIL import Image, ImageFont, ImageDraw
 import numpy as np
 import random
-import math
 
 HERE = Path(__file__).resolve().parents[1]
 OUT = HERE / 'assets'
@@ -89,59 +88,4 @@ base=Image.alpha_composite(base.convert('RGBA'),Image.fromarray(rgba,'RGBA'))
 base=base.convert('RGB')
 base.save(OUT/'fallback.png',optimize=True)
 
-preview=base.convert('RGBA')
-d=ImageDraw.Draw(preview)
-def font(px, bold=False):
-    p=SANS
-    if bold:
-        b=p.replace('.ttf','-Bold.ttf')
-        if Path(b).exists(): p=b
-    return ImageFont.truetype(p,px)
-def text(x,y,value,size,color=(217,252,231),bold=False,space=0):
-    ft=font(size,bold)
-    if not space:
-        d.text((x,y),value,font=ft,fill=color)
-    else:
-        xx=x
-        for ch in value:
-            d.text((xx,y),ch,font=ft,fill=color)
-            xx+=d.textlength(ch,font=ft)+space
-
-def hair(x1,y1,x2,y2,color,width=1):
-    d.line((x1,y1,x2,y2),fill=color,width=width)
-
-d.rectangle((72,60,81,69),fill=(116,255,166))
-d.rectangle((75,63,78,66),fill=(0,33,14))
-hair(181,61,181,79,(70,114,80))
-text(195,55,'MATRIX // 03',11,(132,255,173),False,2)
-text(98,85,'ARCH LINUX     /     SECURE ACCESS TERMINAL',10,(84,124,94))
-text(1416,50,'22:14',33,(218,251,231))
-text(1350,95,'SAT · 17 OCT 2026',10,(152,188,158))
-hair(72,185,72,325,(38,91,52))
-x,y=576,269
-d.rectangle((x,y+4,x+5,y+9),fill=(135,255,176))
-text(x+15,y-2,'IDENTITY VERIFICATION',11,(135,255,176),True,1)
-hair(x,y+28,x+40,y+28,(118,255,160))
-hair(x+52,y+28,x+448,y+28,(36,79,48))
-text(x-2,y+44,'WAKE THE SYSTEM',30,(226,253,233))
-text(x,y+98,'Enter your credentials to continue.',11,(149,189,162))
-text(x,y+147,'01    USERNAME',10,(152,188,163),False,1)
-text(x,y+170,'demo-user',22,(220,250,229))
-text(x+426,y+170,'⌄',18,(139,255,176))
-hair(x,y+209,x+448,y+209,(116,151,120))
-text(x+335,y+218,'OTHER USER ↗',10,(151,187,160))
-text(x,y+257,'02    PASSPHRASE',10,(152,188,163),False,1)
-text(x,y+281,'●●●●●●●●●●',19,(224,253,231))
-hair(x,y+320,x+448,y+320,(128,250,158),2)
-text(x,y+350,'SYSTEM READY  /  SECURE',10,(84,126,98))
-d.rectangle((x+316,y+335,x+448,y+379),fill=(9,55,30),outline=(54,165,91))
-text(x+336,y+349,'SIGN IN   ↗',11,(225,255,231),True)
-hair(72,817,1528,817,(33,80,50))
-text(72,783,'TERMINAL  /  03                         ENCRYPTED SESSION',10,(75,113,86))
-text(72,839,'SESSION  /  PLASMA (WAYLAND)',10,(145,185,153))
-text(330,839,'KEYBOARD',10,(145,185,153))
-text(448,839,'ON-SCREEN',10,(145,185,153))
-text(1275,839,'RESTART',10,(145,185,153))
-text(1390,839,'SHUT DOWN',10,(145,185,153))
-preview.convert('RGB').save(HERE/'preview.png',optimize=True)
-print('Wrote', OUT/'glyph-atlas.png', OUT/'fallback.png', HERE/'preview.png')
+print('Wrote', OUT/'glyph-atlas.png', OUT/'fallback.png')

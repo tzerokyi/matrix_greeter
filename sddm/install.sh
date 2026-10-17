@@ -16,7 +16,7 @@ sudo install -d -o root -g root -m 0755 "$dest" "$dest/assets" "$dest/shaders"
 sudo install -o root -g root -m 0644 \
     "$here/Main.qml" "$here/RainEngine.qml" "$here/FlatAction.qml" \
     "$here/theme.conf" "$here/metadata.desktop" "$here/LICENSE" \
-    "$here/preview.png" "$dest/"
+    "$here/login-preview.png" "$dest/"
 sudo install -o root -g root -m 0644 "$here/assets/glyph-atlas.png" \
     "$here/assets/fallback.png" "$dest/assets/"
 sudo install -o root -g root -m 0644 "$here/shaders/rain.frag" \
