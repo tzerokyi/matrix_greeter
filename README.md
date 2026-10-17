@@ -1,5 +1,7 @@
 # Matrix Greeter
 
+![Matrix Greeter SDDM login preview](sddm/preview.png)
+
 Matching Matrix-style themes for two distinct KDE Plasma 6 screens:
 
 - `sddm/`: graphical login **before** a Plasma session starts. SDDM controls authentication and session choice.
