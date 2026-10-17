@@ -1,6 +1,10 @@
 # Matrix Greeter
 
-![Matrix Greeter SDDM login screenshot](sddm/login-preview.png)
+[Watch the 10-second SDDM demo (MP4)](media/matrix-greeter-demo-10s.mp4?raw=1)
+
+[![Matrix Greeter SDDM login screenshot](sddm/login-preview.png)](media/matrix-greeter-demo-10s.mp4?raw=1)
+
+The video shows the SDDM theme in test mode with a moving pointer. It does not show a real login.
 
 Matching Matrix-style themes for two distinct KDE Plasma 6 screens:
 
